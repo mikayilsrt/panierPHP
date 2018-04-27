@@ -1,6 +1,9 @@
 <?php
 
 use \App\Controllers\HomeController;
+
+use \App\Controllers\ProductsController;
+
 use \App\Config\Database;
 
 require "vendor/autoload.php";
@@ -13,6 +16,10 @@ if(!empty($_GET['page']) || $_GET['page'] == "home") {
         case "home":
             $homeController = new HomeController();
             $homeController->index();
+            break;
+        case "products":
+            $productsController = new ProductsController();
+            $productsController->index();
             break;
     endswitch;
 
