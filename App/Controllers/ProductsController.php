@@ -15,4 +15,8 @@ class ProductsController extends Controller {
         require Controller::view("products/index.view");
     }
 
+    public function show ($id) {
+        require Controller::view("products/show.view");
+    }
+
 }

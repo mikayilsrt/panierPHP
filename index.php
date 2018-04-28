@@ -10,9 +10,11 @@ require "vendor/autoload.php";
 
 $db = new Database("e-commerce");
 
-if(!empty($_GET['page']) || $_GET['page'] == "home") {
+$page = htmlspecialchars($_GET['page']);
 
-    switch ($_GET['page']):
+if(!empty($page) || $page == "home") {
+
+    switch ($page):
         case "home":
             $homeController = new HomeController();
             $homeController->index();
@@ -21,8 +23,12 @@ if(!empty($_GET['page']) || $_GET['page'] == "home") {
             $productsController = new ProductsController();
             $productsController->index();
             break;
+        case ("show") && !empty($_GET['id']):
+            $productsController = new ProductsController();
+            $productsController->show(htmlspecialchars($_GET['id']));
+            break;
         default:
-            die("ERROR 404!");
+            die("ERROR 404! root");
     endswitch;
 
 } else {
