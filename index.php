@@ -25,7 +25,7 @@ if(!empty($page) || $page == "home") {
             break;
         case ("show") && !empty($_GET['id']):
             $productsController = new ProductsController();
-            $productsController->show(htmlspecialchars($_GET['id']));
+            $productsController->index(htmlspecialchars($_GET['id']));
             break;
         default:
             die("ERROR 404! root");

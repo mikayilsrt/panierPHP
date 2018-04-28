@@ -16,4 +16,14 @@ class Clothes extends Model{
         return $datas;
     }
 
+    /**
+     * Require one product.
+     * @param  [type] $id [description]
+     * @return [type]     [description]
+     */
+    public function oneClothe ($id) {
+        $data  = Model::query("SELECT * FROM clothes WHERE id = $id");
+        return $data;
+    }
+
 }
