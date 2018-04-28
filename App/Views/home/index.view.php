@@ -55,7 +55,7 @@
                                     <p class="card-text"><?= $clothe->description; ?></p>
                                     <div class="d-flex justify-content-between align-items-center">
                                         <div class="btn-group">
-                                            <a href="#" class="btn btn-sm btn-outline-secondary"><i class="fas fa-eye"></i> Voir</a>
+                                            <a href="?page=show&id=<?= $clothe->id; ?>" class="btn btn-sm btn-outline-secondary"><i class="fas fa-eye"></i> Voir</a>
                                             <a href="#" class="btn btn-sm btn-outline-secondary"><i class="fas fa-shopping-cart"></i> +</a>
                                             <button type="button" class="btn btn-sm btn-outline-secondary"><?= $clothe->price; ?> €</button>
                                         </div>
