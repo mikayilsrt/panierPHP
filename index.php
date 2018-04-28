@@ -21,6 +21,8 @@ if(!empty($_GET['page']) || $_GET['page'] == "home") {
             $productsController = new ProductsController();
             $productsController->index();
             break;
+        default:
+            die("ERROR 404!");
     endswitch;
 
 } else {
