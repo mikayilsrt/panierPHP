@@ -13,7 +13,7 @@ class ProductsController extends Controller {
      * Return the show page.
      * @return [type] [description]
      */
-    public function index ($id) {
+    public function index (int $id) {
         $products = new Clothes();
         $product = $products->oneClothe($id);
         require Controller::view("products/index.view");
