@@ -42,15 +42,21 @@
                         <p><?= $product[0]->description; ?></p>
                         <p><?= $product[0]->price; ?> €</p>
                         <form method="post" action="">
+                            <!--
+                            <input type="hidden" name="name" value="<?= $product[0]->nameProduct; ?>" />
+                            <input type="hidden" name="brand" value="<?= $product[0]->brand; ?>" />
+                            <input type="hidden" name="price" value="<?= $product[0]->price; ?>" />
+                            <input type="hidden" name="name" value="<?= $product[0]->nameProduct; ?>" />
+                            -->
                             <div class="input-group mb-3">
-                                <select class="custom-select" id="inputGroupSelect02">
-                                    <option selected>1</option>
-                                    <option value="1">2</option>
-                                    <option value="2">3</option>
-                                    <option value="3">4</option>
+                                <select class="custom-select" name="amount">
+                                    <option selected value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
                                 </select>
                                 <div class="input-group-append">
-                                    <button type="submit" class="btn btn-primary"><i class="fas fa-shopping-cart"></i> +</button>
+                                    <button type="submit" name="submit" class="btn btn-primary"><i class="fas fa-shopping-cart"></i> +</button>
                                 </div>
                             </div>
                         </form>

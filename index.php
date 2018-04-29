@@ -27,6 +27,10 @@ if(!empty($page) || $page == "home") {
             $productsController = new ProductsController();
             $productsController->index(htmlspecialchars($_GET['id']));
             break;
+        case "panier":
+            //$panierController = new BinController();
+            //$panierController->getPanier();
+            break;
         default:
             die("ERROR 404! root");
     endswitch;
