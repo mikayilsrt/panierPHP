@@ -27,7 +27,7 @@ class ProductsController extends Controller {
             $amount = \htmlspecialchars($_POST['amount']); // quantité
 
             $addProduct = new BinController();
-            $addProduct->addPanier(); // $id, $amount, date("Y-m-d")
+            $addProduct->addPanier($id, $amount);
         endif;
 
         require Controller::view("products/index.view");

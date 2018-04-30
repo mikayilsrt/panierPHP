@@ -4,6 +4,8 @@ use \App\Controllers\HomeController;
 
 use \App\Controllers\ProductsController;
 
+use \App\Controllers\BinController;
+
 use \App\Config\Database;
 
 require "vendor/autoload.php";
@@ -28,8 +30,8 @@ if(!empty($page) || $page == "home") {
             $productsController->index(htmlspecialchars($_GET['id']));
             break;
         case "panier":
-            //$panierController = new BinController();
-            //$panierController->getPanier();
+            $panierController = new BinController();
+            $panierController->getPanier();
             break;
         default:
             die("ERROR 404! root");

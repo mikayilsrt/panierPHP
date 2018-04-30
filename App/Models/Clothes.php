@@ -26,4 +26,9 @@ class Clothes extends Model{
         return $data;
     }
 
+    public function BinClothe ($ids) {
+        $data  = Model::query('SELECT * FROM clothes WHERE id IN ('.implode(',', $ids).')');
+        return $data;
+    }
+
 }
