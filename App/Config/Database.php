@@ -5,7 +5,8 @@ namespace App\Config;
 use \PDO;
 
 /**
- * DataBase class.
+ * Class Database
+ * @package App\Config
  */
 class Database {
 
@@ -16,11 +17,11 @@ class Database {
     private $pdo;
 
     /**
-     * Constructor of the Data Base.
-     * @param [type] $db_name     [description]
-     * @param string $db_host     [description]
-     * @param string $db_user     [description]
-     * @param string $db_password [description]
+     * Database constructor.
+     * @param $db_name
+     * @param string $db_host
+     * @param string $db_user
+     * @param string $db_password
      */
     public function __construct ($db_name, $db_host = "localhost", $db_user = "root", $db_password = "") {
         $this->db_name = $db_name;
@@ -31,7 +32,7 @@ class Database {
 
     /**
      * Connection to the data base.
-     * @return [type] [description]
+     * @return PDO
      */
     public function getPDO () {
         if ($this->pdo === null) {

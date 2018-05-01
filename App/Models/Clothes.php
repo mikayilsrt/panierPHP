@@ -3,13 +3,14 @@
 namespace App\Models;
 
 /**
- * Clothes class extends of model.
+ * Class Clothes
+ * @package App\Models
  */
 class Clothes extends Model{
 
     /**
      * Require all products.
-     * @return [type] [description]
+     * @return array
      */
     public function clothesAll () {
         $datas = Model::query("SELECT * FROM clothes");
@@ -18,14 +19,19 @@ class Clothes extends Model{
 
     /**
      * Require one product.
-     * @param  [type] $id [description]
-     * @return [type]     [description]
+     * @param $id
+     * @return array
      */
     public function oneClothe ($id) {
         $data  = Model::query("SELECT * FROM clothes WHERE id = $id");
         return $data;
     }
 
+    /**
+     * Collect all products from the basket.
+     * @param $ids
+     * @return array
+     */
     public function BinClothe ($ids) {
         $data  = Model::query('SELECT * FROM clothes WHERE id IN ('.implode(',', $ids).')');
         return $data;

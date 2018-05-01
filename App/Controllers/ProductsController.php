@@ -7,13 +7,14 @@ use App\Models\Clothes;
 use App\Controllers\BinController;
 
 /**
- * HomeController class.
+ * Class ProductsController
+ * @package App\Controllers
  */
 class ProductsController extends Controller {
 
     /**
      * Return the show page.
-     * @return [type] [description]
+     * @param int $id
      */
     public function index (int $id) {
         $products = new Clothes();

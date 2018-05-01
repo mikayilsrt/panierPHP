@@ -5,14 +5,15 @@ namespace App\Models;
 use \PDO;
 
 /**
- * Model class.
+ * Class Model
+ * @package App\Models
  */
 class Model {
 
     /**
      * Query sql.
-     * @param  [type] $statment [description]
-     * @return [type]           [description]
+     * @param $statment
+     * @return array
      */
     static function query ($statment) {
         global $db;

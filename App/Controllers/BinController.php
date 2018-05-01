@@ -5,12 +5,13 @@ namespace App\Controllers;
 use App\Models\Clothes;
 
 /**
- * BinController class.
+ * Class BinController
+ * @package App\Controllers
  */
 class BinController extends Controller {
 
     /**
-     * Constructor of the class BinController.
+     * BinController constructor.
      */
     public function __construct () {
         if (!isset($_SESSION)) {
@@ -21,10 +22,18 @@ class BinController extends Controller {
         }
     }
 
+    /**
+     * Function that add a product on the basket
+     * @param $id
+     * @param $amount
+     */
     public function addPanier ($id, $amount) {
         $_SESSION['panier'][$id] = $amount;
     }
 
+    /**
+     * Function that remove all sessions from the basket.
+     */
     public function delAllPanier () {
         if ($_SESSION['panier']) {
             unset($_SESSION['panier']);
@@ -32,8 +41,7 @@ class BinController extends Controller {
     }
 
     /**
-     * [getPanier description]
-     * @return [type] [description]
+     * Function that displays the basket.
      */
     public function getPanier () {
 

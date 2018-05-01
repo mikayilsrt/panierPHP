@@ -5,13 +5,13 @@ namespace App\Controllers;
 use App\Models\Clothes;
 
 /**
- * HomeController class.
+ * Class HomeController
+ * @package App\Controllers
  */
 class HomeController extends Controller{
 
     /**
      * Return the home page.
-     * @return [type] [description]
      */
     public function index () {
         $query = new Clothes();
