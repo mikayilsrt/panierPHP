@@ -25,7 +25,7 @@
                     </ul>
                     <ul class="navbar-nav ml-auto">
                         <li class="nav-item">
-                            <a href="#" class="nav-link"><i class="fas fa-shopping-cart"></i> Panier</a>
+                            <a href="?page=panier" class="nav-link"><i class="fas fa-shopping-cart"></i> Panier</a>
                         </li>
                     </ul>
                 </div>

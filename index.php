@@ -34,7 +34,7 @@ if(!empty($page) || $page == "home") {
             $panierController->getPanier();
             break;
         default:
-            die("ERROR 404! root");
+            header("HTTP/1.0 404 Not Found");
     endswitch;
 
 } else {

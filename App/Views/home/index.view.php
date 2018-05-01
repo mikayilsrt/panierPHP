@@ -25,7 +25,7 @@
                     </ul>
                     <ul class="navbar-nav ml-auto">
                         <li class="nav-item">
-                            <a href="#" class="nav-link"><i class="fas fa-shopping-cart"></i> Panier</a>
+                            <a href="?page=panier" class="nav-link"><i class="fas fa-shopping-cart"></i> Panier</a>
                         </li>
                     </ul>
                 </div>
@@ -34,8 +34,8 @@
         <main role="main">
             <section class="jumbotron text-center">
                 <div class="container">
-                    <h1 class="jumbotron-heading">Album example</h1>
-                    <p class="lead text-muted">Something short and leading about the collection below—its contents, the creator, etc. Make it short and sweet, but not too short so folks don't simply skip over it entirely.</p>
+                    <h1 class="jumbotron-heading">Boutique E-commerce !</h1>
+                    <p class="lead text-muted">Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression.</p>
                     <p>
                         <a href="#" class="btn btn-primary my-2">Main call to action</a>
                         <a href="#" class="btn btn-secondary my-2">Secondary action</a>
