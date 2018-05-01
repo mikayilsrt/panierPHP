@@ -21,7 +21,8 @@ class ProductsController extends Controller {
         $product = $products->oneClothe($id);
 
         if(!$product):
-            die("Ce produit n'existe pas.");
+            header("HTTP/1.0 404 Not Found");
+            die("ERROR 404 PAGE NOT FOUND !");
         endif;
 
         if(isset($_POST['submit'])):
