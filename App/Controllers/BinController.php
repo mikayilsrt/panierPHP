@@ -41,21 +41,32 @@ class BinController extends Controller {
     }
 
     /**
+     * Function that remove a product from the basket.
+     */
+    public function dellOnePanier($id) {
+        if ($_SESSION['panier'][$id]) {
+            unset($_SESSION['panier'][$id]);
+        }
+    }
+
+    /**
      * Function that displays the basket.
      */
     public function getPanier () {
 
-        if (isset($_POST['delBin'])) {
+        if (isset($_POST['delOneBin'])) { // Remove a product.
+            $this->dellOnePanier(\htmlspecialchars($_POST['id']));
+        }
+
+        if (isset($_POST['delBin'])) { // Remove all product.
             $this->delAllPanier();
         }
 
         if (!empty($_SESSION['panier'])) {
-
             $ids = \array_keys($_SESSION['panier']);
 
             $productController = new Clothes();
             $products = $productController->BinClothe($ids);
-
         } else {
             $products = array();
         }

@@ -50,7 +50,14 @@
                                         <th scope="row"><?= $product->nameProduct; ?></th>
                                         <td><?= $product->price; ?> €</td>
                                         <td><?= $_SESSION['panier'][$product->id]; ?></td>
-                                        <td><a href="" class="btn btn-danger">Supprimer</a></td>
+                                        <td>
+                                            <form method="post" action="">
+                                                <div class="form-group">
+                                                    <input type="hidden" name="id" value="<?= $product->id; ?>" />
+                                                    <button type="submit" name="delOneBin" class="btn btn-danger">Supprimer</button>
+                                                </div>
+                                            </form>
+                                        </td>
                                     </tr>
                                 <?php endforeach; ?>
                             </tbody>
