@@ -4,6 +4,7 @@
         <meta charset="UTF-8" />
         <title>Panier</title>
         <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" />
+        <link rel="stylesheet" type="text/css" href="public/css/animate.css" />
         <link rel="stylesheet" type="text/css" href="public/css/style.css" />
     </head>
     <body>
@@ -34,10 +35,10 @@
         <div class="album py-5">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-6">
+                    <div class="col-md-6 animated bounceInLeft">
                         <img style="width: 100%;" src="public/images/products/<?= $product[0]->image; ?>" />
                     </div>
-                    <div class="col-md-6">
+                    <div class="col-md-6 animated bounceInRight">
                         <h1><?= $product[0]->nameProduct; ?> | <strong><?= $product[0]->brand; ?></strong></h1>
                         <p><?= $product[0]->description; ?></p>
                         <p><?= $product[0]->price; ?> €</p>

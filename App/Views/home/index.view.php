@@ -4,6 +4,7 @@
         <meta charset="UTF-8" />
         <title>Panier</title>
         <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" />
+        <link rel="stylesheet" type="text/css" href="public/css/animate.css" />
         <link rel="stylesheet" type="text/css" href="public/css/style.css" />
     </head>
     <body>
@@ -31,7 +32,7 @@
                 </div>
             </nav>
         </header>
-        <main role="main">
+        <main role="main" class="animated bounceInLeft">
             <section class="jumbotron text-center">
                 <div class="container">
                     <h1 class="jumbotron-heading">Boutique E-commerce !</h1>
@@ -44,7 +45,7 @@
             </section>
         </main>
         <div class="album py-5 bg-light">
-            <div class="container">
+            <div class="container animated bounceInUp">
                 <div class="row">
                     <?php foreach ($clothes as $clothe): ?>
                         <div class="col-md-4">

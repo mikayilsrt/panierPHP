@@ -4,6 +4,7 @@
         <meta charset="UTF-8" />
         <title>Panier</title>
         <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" />
+        <link rel="stylesheet" type="text/css" href="public/css/animate.css" />
         <link rel="stylesheet" type="text/css" href="public/css/style.css" />
     </head>
     <body>
